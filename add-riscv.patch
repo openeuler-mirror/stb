@@ -1,0 +1,12 @@
+diff -u -r stb-8b5f1f37b5b75829fc72d38e7b5d4bcbf8a26d55/stb_sprintf.h stb-8b5f1f37b5b75829fc72d38e7b5d4bcbf8a26d55/stb_sprintf.h
+--- stb-8b5f1f37b5b75829fc72d38e7b5d4bcbf8a26d55/stb_sprintf.h	2022-09-09 00:40:02.000000000 +0800
++++ stb-8b5f1f37b5b75829fc72d38e7b5d4bcbf8a26d55/stb_sprintf.h	2023-06-18 18:36:55.000000000 +0800
+@@ -230,7 +230,7 @@
+ #define stbsp__uint16 unsigned short
+ 
+ #ifndef stbsp__uintptr
+-#if defined(__ppc64__) || defined(__powerpc64__) || defined(__aarch64__) || defined(_M_X64) || defined(__x86_64__) || defined(__x86_64) || defined(__s390x__)
++#if defined(__ppc64__) || defined(__powerpc64__) || defined(__aarch64__) || defined(_M_X64) || defined(__x86_64__) || defined(__x86_64) || defined(__s390x__) || (defined(__riscv) && __riscv_xlen == 64)
+ #define stbsp__uintptr stbsp__uint64
+ #else
+ #define stbsp__uintptr stbsp__uint32

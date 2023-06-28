@@ -26,7 +26,7 @@ Name:           stb
 #   https://github.com/nothings/stb/issues/1101
 %global snapinfo .20220908git8b5f1f3
 Version:        0%{snapinfo}
-Release:        0.4
+Release:        0.5
 Summary:        Single-file public domain libraries for C/C++
 
 # See LICENSE.
@@ -115,6 +115,7 @@ Patch07:        1297.patch
 # Issue 24232: stb:stb_png_read_fuzzer: Timeout in stb_png_read_fuzzer
 # https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=24232&q=proj%3Dstb
 Patch08:        1230.patch
+Patch09:        add-riscv.patch
 
 %global stb_c_lexer_version 0.12
 %global stb_connected_components_version 0.96
@@ -878,6 +879,9 @@ EOF
 
 
 %changelog
+* Tue Jun 20 2023 yoo <sunyuechi@iscas.ac.cn> - 020220908git8b5f1f3-0.5
+- add riscv support
+
 * Mon Dec 5 2022 peijiankang <peijiankang@kylinos.cn> - 0.20220908git8b5f1f3-0.4
 - Init package for openEuler
 
